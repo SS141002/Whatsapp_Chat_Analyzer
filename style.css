@@ -1,9 +1,33 @@
+/*
 @font-face {
-  font-family: "Roboto";
-  font-weight: 500;
-  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Titillium";
+  src: url("assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
-* {
-  font-family: "Roboto", sans-serif;
+*,
+body {
+  font-family: "Titillium", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium", sans-serif;
+}
+
+*/
+
+.st-emotion-cache-5an96u.e1nzilvr3 {
+  display: none;
+}
+
+.st-emotion-cache-clh2db.e1f1d6gn2 h2 {
+  font-size: 1.8rem;
+}
+
+.st-emotion-cache-clh2db.e1f1d6gn2 h3 {
+  font-size: 1.75rem;
 }

@@ -28,7 +28,15 @@ def fetch_stats(selected_user, df):
     for message in df["message"]:
         links.extend(extract.find_urls(message))
 
-    return num_messages, len(words), num_media_messages, len(links)
+    num_deleted_messages = df[df["message"] == "This message was deleted\n"].shape[0]
+
+    return (
+        num_messages,
+        len(words),
+        num_media_messages,
+        len(links),
+        num_deleted_messages,
+    )
 
 
 def most_busy_users(df):

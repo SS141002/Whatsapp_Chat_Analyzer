@@ -29,24 +29,27 @@ if uploaded_file is not None:
     if st.sidebar.button("Show Analysis"):
 
         # Stats Area
-        num_messages, words, num_media_messages, num_links = helper.fetch_stats(
-            selected_user, df
+        num_messages, words, num_media_messages, num_links, num_deleted_messages = (
+            helper.fetch_stats(selected_user, df)
         )
         st.title("Top Statistics")
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, col4, col5 = st.columns(5)
 
         with col1:
             st.header("Total Messages")
-            st.title(num_messages)
+            st.subheader(num_messages)
         with col2:
             st.header("Total Words")
-            st.title(words)
+            st.subheader(words)
         with col3:
             st.header("Media Shared")
-            st.title(num_media_messages)
+            st.subheader(num_media_messages)
         with col4:
             st.header("Links Shared")
-            st.title(num_links)
+            st.subheader(num_links)
+        with col5:
+            st.header("Message Deleted")
+            st.subheader(num_deleted_messages)
 
         # monthly timeline
         st.title("Monthly Timeline")
