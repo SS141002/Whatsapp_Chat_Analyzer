@@ -4,13 +4,13 @@ import matplotlib.font_manager as fm
 import seaborn as sns
 import preprocessor, helper
 
+
 with open("style.css") as css:
     st.markdown(f"<style>{css.read()}</style>", unsafe_allow_html=True)
 
+cfm = fm.FontProperties(fname="assets/fonts/seguiemj.ttf")
+
 st.sidebar.title("Whatsapp Chat Analyzer")
-
-plt.rcParams["font.family"] = "Segoe UI Emoji"
-
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
@@ -138,5 +138,6 @@ if uploaded_file is not None:
                 emoji_df["Number"].head(),
                 labels=emoji_df["Emoji"].head(),
                 autopct="%0.2f",
+                textprops={"fontproperties": cfm},
             )
             st.pyplot(fig)
