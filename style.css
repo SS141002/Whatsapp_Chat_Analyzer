@@ -1,0 +1,4 @@
+html, body, [class="css"] {
+    font-family: 'NotoSans', sans-serif;   
+    src : url('assets/fonts/NotoSans-VariableFont.ttf')
+}
